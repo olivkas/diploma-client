@@ -1,0 +1,90 @@
+.calendar-days li::after {
+  position: absolute;
+  content: attr(data-day);
+  color: #5b6069;
+}
+
+.week-wrapper {
+  /* width: 1200px; */
+  height: 620px;
+  margin: 0 auto;
+}
+
+.calendar-week {
+  font-size: 14px;
+  color: #4f4f4f;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.calendar-week li {
+  width: calc(980px / 7);
+  text-align: center;
+}
+
+.calendar-days li {
+  width: 140px;
+  height: 90px;
+  margin: 0;
+  border: 1px solid #ededed;
+  background-color: #fff;
+}
+
+.calendar-days {
+  font-size: 16px;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 980px;
+}
+
+.weeksday {
+  display: flex;
+}
+
+.calendar-days li.current-day {
+  background-color: #c8f6db;
+
+  /* opacity: 0.4; */
+  border: 1px solid #8c94aa;
+}
+
+.calendar-days li.selected-day {
+  border: 1px solid #8c94aa;
+}
+
+.calendar-days li.emptySlot {
+  background-color: #fff;
+  border: none;
+}
+
+.calendar-days li::before {
+  content: attr(data-day);
+  color: #5b6069;
+}
+
+.calendar-days li::after {
+  content: '';
+}
+
+.day {
+  width: 127px;
+  height: 24px;
+
+  margin-left: 5px;
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: center; */
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #5b6069;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  text-overflow: ellipsis;
+}
+
+.day::first-letter {
+  text-transform: uppercase;
+}
